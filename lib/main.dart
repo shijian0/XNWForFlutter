@@ -31,7 +31,6 @@ class MyApp extends StatelessWidget {
           debugShowCheckedModeBanner: false,
           home: Consumer<UserDataViewModel>(
             builder: (context, userdata, child) {
-              print("jjj");
               return homeWidget(userData);
             },
           ),

@@ -12,7 +12,7 @@ class AppGlobal {
 
   static Future init() async {
     shared = await SharedPreferences.getInstance();
-    print("_shared1=$shared");
+    print("AppGlobal init");
     var loginDataJsonString = shared.getString("loginData");
     if (loginDataJsonString != null) {
       loginModel = LoginModel.fromJson(jsonDecode(loginDataJsonString));
@@ -47,7 +47,6 @@ class AppGlobal {
 
   static saveThemeIndex(int index) {
     print("save theme index:$themeIndex");
-    print("save theme index:$index");
     themeIndex = index;
     AppGlobal.shared.setInt("theme_index", themeIndex);
   }
